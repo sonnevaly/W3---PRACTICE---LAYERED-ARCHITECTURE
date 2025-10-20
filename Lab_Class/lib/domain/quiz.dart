@@ -44,5 +44,13 @@ class Quiz {
     return ((totalSCore / questions.length) * 100).toInt();
   }
 
-  int getScoreInPoint() {}
+  int getScoreInPoint() {
+    int totalPoints = 0;
+    for (Answer answer in answers) {
+      if (answer.isGood()) {
+        totalPoints += answer.question.points;
+      }
+    }
+    return totalPoints;
+  }
 }
