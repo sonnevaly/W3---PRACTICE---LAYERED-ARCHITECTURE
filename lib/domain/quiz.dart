@@ -24,10 +24,19 @@ class Answer {
   }
 }
 
+class Player {
+  String name;
+  int scorePlayer;
+  Player({required this.name, this.scorePlayer = 0});
+
+  void updateScore(int newScore) {
+    scorePlayer = newScore;
+  }
+}
+
 class Quiz {
   List<Question> questions;
   List<Answer> answers = [];
-  List<Point> points = [];
 
   Quiz({required this.questions});
 

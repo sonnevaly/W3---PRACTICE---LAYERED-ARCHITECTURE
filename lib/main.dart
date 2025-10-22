@@ -15,8 +15,7 @@ void main() {
         points: 50),
   ];
 
-  Quiz quiz = Quiz(questions: questions);
-  QuizConsole console = QuizConsole(quiz: quiz);
+  QuizConsole console = QuizConsole(questions: questions);
 
   console.startQuiz();
 }
